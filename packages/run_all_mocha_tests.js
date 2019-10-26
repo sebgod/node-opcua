@@ -207,7 +207,7 @@ class MyReporter {
                     heapdump.writeSnapshot('./' + heapsnapshot + '.start.heapsnapshot');
             })
             .on(EVENT_SUITE_BEGIN, test => {
-                process.stdout.clearLine();  // clear current text
+                //xx process.stdout.clearLine();  // clear current text
                 process.stdout.cursorTo(0);  // move cursor to beginning of line
                 console.log("                  " + this.indent() + chalk.yellow(test.title));
                 this.increaseIndent();
@@ -275,7 +275,7 @@ class MyReporter {
         extra = extra || "";
         try {
             process.stdout.cursorTo(0);  // move cursor to beginning of line
-            process.stdout.clearLine();  // clear current text
+            //xx process.stdout.clearLine();  // clear current text
 
             process.stdout.cursorTo(0);  // move cursor to beginning of line
             const title = this.indent() + status + " " + test.title;
